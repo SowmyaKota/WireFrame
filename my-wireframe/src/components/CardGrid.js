@@ -1,32 +1,32 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './CardGrid.css';
 
 export default function CardGrid() {
   return (
-    <div className="container-fluid mt-4">
+    <div className="container py-5">
       <div className="row g-4">
-        {/* Large Card on the left */}
+        
         <div className="col-lg-6">
-          <div className="card h-100 shadow">
-            <img src="https://via.placeholder.com/600x300" className="card-img-top" alt="Large Card" />
-            <div className="card-body">
-              <h5 className="card-title">Card Title</h5>
-              <p className="card-text text-muted">This is a description of the large card.</p>
-              <a href="#" className="btn btn-info">CTA Button</a>
+          <div className="card large-card card-background-1">
+            <div className="overlay"></div>
+            <div className="content">
+              <h4 className="fw-bold">Card Title</h4>
+              <p>Some description here for the large card.</p>
+              <button className="btn btn-primary">CTA Button</button>
             </div>
           </div>
         </div>
 
-        {/* Smaller Cards on the right */}
         <div className="col-lg-6">
           <div className="row g-4">
-            {[...Array(4)].map((_, i) => (
-              <div className="col-md-6" key={i}>
-                <div className="card h-100 shadow-sm">
-                  <img src="https://via.placeholder.com/300x150" className="card-img-top" alt="Small Card" />
-                  <div className="card-body">
-                    <h6 className="card-title">Card Title</h6>
-                    <p className="card-text text-muted">Small card content</p>
+            {['2', '3', '4', '5'].map((bg, i) => (
+              <div className="col-6" key={i}>
+                <div className={`card small-card card-background-${bg}`}>
+                  <div className="overlay"></div>
+                  <div className="content">
+                    <h6 className="fw-bold">Card Title</h6>
+                    <p className="small">Card details...</p>
+                    <button className="btn btn-outline-light btn-sm mt-2">View</button>
                   </div>
                 </div>
               </div>
