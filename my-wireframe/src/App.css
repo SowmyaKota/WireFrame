@@ -10,3 +10,26 @@ body, html {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    position: static;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
